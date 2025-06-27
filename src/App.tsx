@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-// import { fetchTodosFromGitHub, saveTodosToGitHub } from './githubApI'
-// import debounce from 'lodash.debounce'
 
 type Todo = {
   id: number

@@ -50,3 +50,4 @@
 今回はReact学習用のToDoリストを作ってみました。  
 次にToDoリストを作ることがあればFirebase AuthenticationとFirestoreを使ってログイン機能・リアルタイム保存を実現してしてみようと思います。  
 拙いコードではありますが、ご意見・ご感想等あれば、ぜひIssueやPull Requestでお知らせください！
+
