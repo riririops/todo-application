@@ -1,0 +1,164 @@
+body {
+  font-size: 1.2rem; /* 全体の文字を大きく */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 700px; /* 幅を広げる */
+  margin: 2.5em auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+  padding: 2.5em;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.2em;
+  color: #333;
+  font-size: 2.2rem; /* タイトルを大きく */
+}
+
+.todo-input {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+.todo-input input,
+.todo-input select {
+  padding: 0.7em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1.1rem;
+}
+
+.todo-input button {
+  padding: 0.9em 1.5em;
+  background: #28a745;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.todo-input button:hover {
+  background: #218838;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-list li {
+  background: #f9f9f9;
+  margin-bottom: 1em;
+  padding: 1.3em;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-size: 1.1rem;
+}
+
+.todo-list span {
+  flex: 1;
+  margin-left: 1.2em;
+  color: #333;
+}
+
+.todo-list .done {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.todo-list button {
+  margin-left: 0.7em;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.todo-list button:nth-child(4) {
+  background: #ff9800;
+}
+.todo-list button:nth-child(4):hover {
+  background: #f57c00;
+}
+.todo-list button:nth-child(5) {
+  background: #e53935;
+}
+.todo-list button:nth-child(5):hover {
+  background: #b71c1c;
+}
+
+.todo-list li:has(input[type="text"]:focus) {
+  background: #e3f2fd;
+  border: 1px solid #90caf9;
+}
+
+.todo-list input[type="checkbox"] {
+  width: 1.6em;
+  height: 1.6em;
+  accent-color: #1976d2;
+}
+
+.todo-list li:not(:last-child) {
+  border-bottom: 1px solid #ececec;
+}
+
+.todo-list input[type="text"] {
+  width: 13em;
+}
+.todo-list input[type="date"] {
+  width: 10em;
+}
+.todo-list select {
+  width: 9em;
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 98vw;
+    padding: 1em;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+  }
+  .todo-input {
+    flex-direction: column;
+    gap: 0.7em;
+  }
+  .todo-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em;
+    font-size: 1rem;
+    gap: 0.7em;
+  }
+  .todo-list span {
+    margin-left: 0;
+  }
+  .todo-list input[type="text"],
+  .todo-list input[type="date"],
+  .todo-list select {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
